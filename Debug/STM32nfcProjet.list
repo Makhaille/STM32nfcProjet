@@ -363,34 +363,33 @@ int main(void)
 {
  8000480:	b580      	push	{r7, lr}
  8000482:	af00      	add	r7, sp, #0
-  /* USER CODE BEGIN 1 */
-	printf("helloWorld\n\r");
- 8000484:	4805      	ldr	r0, [pc, #20]	; (800049c <main+0x1c>)
- 8000486:	f001 fd5d 	bl	8001f44 <iprintf>
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
- 800048a:	f000 fa62 	bl	8000952 <HAL_Init>
+ 8000484:	f000 fa65 	bl	8000952 <HAL_Init>
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
- 800048e:	f000 f807 	bl	80004a0 <SystemClock_Config>
+ 8000488:	f000 f80a 	bl	80004a0 <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
- 8000492:	f000 f87d 	bl	8000590 <MX_GPIO_Init>
+ 800048c:	f000 f880 	bl	8000590 <MX_GPIO_Init>
   MX_USART2_UART_Init();
- 8000496:	f000 f851 	bl	800053c <MX_USART2_UART_Init>
-
+ 8000490:	f000 f854 	bl	800053c <MX_USART2_UART_Init>
+  /* USER CODE BEGIN 2 */
+  printf("helloWorld\n\r");
+ 8000494:	4801      	ldr	r0, [pc, #4]	; (800049c <main+0x1c>)
+ 8000496:	f001 fd55 	bl	8001f44 <iprintf>
   /* USER CODE END 2 */
 
   /* Infinite loop */
