@@ -53,7 +53,11 @@ UART_HandleTypeDef huart2;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
+<<<<<<< HEAD
 static void MX_SPI1_Init(void);
+=======
+
+>>>>>>> 1f659dec366dd3c29fe75a0c4cdb2df432ae09b9
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -94,7 +98,10 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+<<<<<<< HEAD
   printf("helloWorld\n\r");
+=======
+>>>>>>> 1f659dec366dd3c29fe75a0c4cdb2df432ae09b9
   /* USER CODE END 2 */
 
   /* Infinite loop */
