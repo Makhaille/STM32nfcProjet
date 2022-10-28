@@ -25,4 +25,8 @@ Core/Src \
 Core/Startup \
 Drivers/Components \
 Drivers/STM32L1xx_HAL_Driver/Src \
+Middlewares/ST/ndef/Src/message \
+Middlewares/ST/ndef/Src/poller \
+Middlewares/ST/ndef/doc/examples \
+Middlewares/ST/rfal/Src \
 
