@@ -40,7 +40,7 @@
 * INCLUDES
 ******************************************************************************
 */
-#include "main.h"
+
 #include "st25r3911.h"
 #include "st25r3911_com.h"
 #include "st25r3911_interrupt.h"
@@ -125,9 +125,9 @@ void st25r3911Initialize(void)
 
     /* Set Operation Control Register to default value */
     st25r3911WriteRegister(ST25R3911_REG_OP_CONTROL, 0x00);
-        
+
     /* enable pull downs on miso line */
-    st25r3911ModifyRegister(ST25R3911_REG_IO_CONF2, 0, 
+    st25r3911ModifyRegister(ST25R3911_REG_IO_CONF2, 0,
             ST25R3911_REG_IO_CONF2_miso_pd1 |
             ST25R3911_REG_IO_CONF2_miso_pd2);
 
@@ -135,9 +135,9 @@ void st25r3911Initialize(void)
     st25r3911DisableInterrupts(ST25R3911_IRQ_MASK_ALL);
     /* and clear them, just to be sure... */
     st25r3911ClearInterrupts();
-    
+
     st25r3911OscOn();
-    
+
     /* Measure vdd and set sup3V bit accordingly */
     vdd_mV = st25r3911MeasureVoltage(ST25R3911_REG_REGULATOR_CONTROL_mpsv_vdd);
 

@@ -23,6 +23,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "demo.h"
+#include "platform.h"
+#include "spi.h"
+#include "usart.h"
+#include "logger.h"
+#include "st_errno.h"
+#include "rfal_nfc.h"
 
 /* USER CODE END Includes */
 
@@ -46,18 +53,14 @@ SPI_HandleTypeDef hspi1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+uint8_t globalCommProtectCnt = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
-<<<<<<< HEAD
 static void MX_SPI1_Init(void);
-=======
-
->>>>>>> 1f659dec366dd3c29fe75a0c4cdb2df432ae09b9
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,10 +101,55 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-<<<<<<< HEAD
-  printf("helloWorld\n\r");
-=======
->>>>>>> 1f659dec366dd3c29fe75a0c4cdb2df432ae09b9
+  /* Initialize driver*/
+  spiInit(&hspi1);
+
+  /* Initialize log module */
+  logUsartInit(&huart2);
+
+  platformLog("Welcome to X-NUCLEO-NFC05A1\r\n");
+  printf("My printf\n\r");
+
+  if( !demoIni() )
+    {
+      /*
+      * in case the rfal initalization failed signal it by flashing all LED
+      * and stoping all operations
+      */
+      platformLog("Initialization failed..\r\n");
+      while(1)
+      {
+        platformLedToogle(PLATFORM_LED_FIELD_PORT, PLATFORM_LED_FIELD_PIN);
+        platformLedToogle(PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN);
+        platformLedToogle(PLATFORM_LED_B_PORT, PLATFORM_LED_B_PIN);
+        platformLedToogle(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
+        platformLedToogle(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+        platformLedToogle(PLATFORM_LED_AP2P_PORT, PLATFORM_LED_AP2P_PIN);
+        platformDelay(100);
+      }
+    }
+    else
+    {
+      platformLog("Initialization succeeded..\r\n");
+      for (int i = 0; i < 6; i++)
+      {
+        platformLedToogle(PLATFORM_LED_FIELD_PORT, PLATFORM_LED_FIELD_PIN);
+        platformLedToogle(PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN);
+        platformLedToogle(PLATFORM_LED_B_PORT, PLATFORM_LED_B_PIN);
+        platformLedToogle(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
+        platformLedToogle(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+        platformLedToogle(PLATFORM_LED_AP2P_PORT, PLATFORM_LED_AP2P_PIN);
+        platformDelay(200);
+      }
+
+      platformLedOff(PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN);
+      platformLedOff(PLATFORM_LED_B_PORT, PLATFORM_LED_B_PIN);
+      platformLedOff(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
+      platformLedOff(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+      platformLedOff(PLATFORM_LED_AP2P_PORT, PLATFORM_LED_AP2P_PIN);
+      platformLedOff(PLATFORM_LED_FIELD_PORT, PLATFORM_LED_FIELD_PIN);
+    }
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -111,6 +159,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	 /* Run Demo Application */
+	 demoCycle();
   }
   /* USER CODE END 3 */
 }

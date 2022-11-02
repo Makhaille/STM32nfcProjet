@@ -65,9 +65,7 @@
 */
 #include "platform.h"
 #include "st_errno.h"
-//#include <stdint.h>
-//#include <stdbool.h>
-//#include <limits.h>
+
 /*
 ******************************************************************************
 * GLOBAL DATATYPES

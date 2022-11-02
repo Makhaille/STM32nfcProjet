@@ -417,9 +417,9 @@ void st25r3911ExecuteCommand( uint8_t cmd )
 
     platformProtectST25R391xComm();
     platformSpiSelect();
-    
+
     platformSpiTxRx( &tmpCmd, NULL, ST25R3911_CMD_LEN );
-    
+
     platformSpiDeselect();
     platformUnprotectST25R391xComm();
 

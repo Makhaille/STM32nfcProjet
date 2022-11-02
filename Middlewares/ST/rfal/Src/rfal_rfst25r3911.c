@@ -409,63 +409,63 @@ ReturnCode rfalInitialize( void )
     
     /* Initialize chip */
     st25r3911Initialize();
-    
+
     /* Check expected chip: ST25R3911 */
     if( !st25r3911CheckChipID( NULL ) )
     {
         return ERR_HW_MISMATCH;
     }
-    
+
     /* Disable any previous observation mode */
     rfalST25R3911ObsModeDisable();
-    
-    /*******************************************************************************/    
+
+    /*******************************************************************************/
     /* Apply RF Chip generic initialization */
     rfalSetAnalogConfig( (RFAL_ANALOG_CONFIG_TECH_CHIP | RFAL_ANALOG_CONFIG_CHIP_INIT) );
 
     /*******************************************************************************/
     /* Set FIFO Water Levels to be used */
     st25r3911ChangeRegisterBits( ST25R3911_REG_IO_CONF1, (ST25R3911_REG_IO_CONF1_fifo_lt | ST25R3911_REG_IO_CONF1_fifo_lr), (ST25R3911_REG_IO_CONF1_fifo_lt_32bytes | ST25R3911_REG_IO_CONF1_fifo_lr_64bytes) );
-    
+
     /* Always have CRC in FIFO upon reception  */
     st25r3911SetRegisterBits( ST25R3911_REG_AUX, ST25R3911_REG_AUX_crc_2_fifo );
-    
+
     /* Enable External Field Detector */
     st25r3911SetRegisterBits( ST25R3911_REG_AUX, ST25R3911_REG_AUX_en_fd );
-    
+
     /* Clear FIFO status local copy */
     rfalFIFOStatusClear();
-    
+
     /*******************************************************************************/
     gRFAL.state              = RFAL_STATE_INIT;
     gRFAL.mode               = RFAL_MODE_NONE;
     gRFAL.field              = false;
-    
+
     /* Set RFAL default configs */
     gRFAL.conf.obsvModeTx    = RFAL_OBSMODE_DISABLE;
     gRFAL.conf.obsvModeRx    = RFAL_OBSMODE_DISABLE;
     gRFAL.conf.eHandling     = RFAL_ERRORHANDLING_NONE;
-    
+
     /* Transceive set to IDLE */
     gRFAL.TxRx.lastState     = RFAL_TXRX_STATE_IDLE;
     gRFAL.TxRx.state         = RFAL_TXRX_STATE_IDLE;
-    
+
     /* Disable all timings */
     gRFAL.timings.FDTListen  = RFAL_TIMING_NONE;
     gRFAL.timings.FDTPoll    = RFAL_TIMING_NONE;
     gRFAL.timings.GT         = RFAL_TIMING_NONE;
-    
+
     gRFAL.tmr.GT             = RFAL_TIMING_NONE;
-    
+
     gRFAL.callbacks.preTxRx  = NULL;
     gRFAL.callbacks.postTxRx = NULL;
-    
-#if RFAL_FEATURE_NFCV    
+
+#if RFAL_FEATURE_NFCV
     /* Initialize NFC-V Data */
     gRFAL.nfcvData.ignoreBits = 0;
 #endif /* RFAL_FEATURE_NFCV */
-    
-#if RFAL_FEATURE_LISTEN_MODE    
+
+#if RFAL_FEATURE_LISTEN_MODE
     /* Initialize Listen Mode */
     gRFAL.Lm.state           = RFAL_LM_STATE_NOT_INIT;
     gRFAL.Lm.brDetected      = RFAL_BR_KEEP;
@@ -475,9 +475,9 @@ ReturnCode rfalInitialize( void )
     /* Initialize Wake-Up Mode */
     gRFAL.wum.state = RFAL_WUM_STATE_NOT_INIT;
 #endif /* RFAL_FEATURE_WAKEUP_MODE */
-    
-    
-    /*******************************************************************************/    
+
+
+    /*******************************************************************************/
     /* Perform Automatic Calibration (if configured to do so).                     *
      * Registers set by rfalSetAnalogConfig will tell rfalCalibrate what to perform*/
     rfalCalibrate();
