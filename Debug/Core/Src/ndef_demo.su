@@ -1,0 +1,17 @@
+ndef_demo.c:191:13:checkUserButton	8	static
+ndef_demo.c:219:13:ndefShowDemoUsage	8	static
+ndef_demo.c:246:6:demoIni	24	static
+ndef_demo.c:311:6:demoCycle	112	static
+ndef_demo.c:560:6:demoP2P	352	static
+ndef_demo.c:656:12:demoTransceiveBlocking	40	static
+ndef_demo.c:672:13:demoNdef	968	static
+ndef_demo.c:887:13:ndefT2TCCDump	56	static
+ndef_demo.c:898:13:ndefT3TAIBDump	64	static
+ndef_demo.c:908:13:ndefT4TCCDump	64	static
+ndef_demo.c:918:13:ndefT5TCCDump	64	static
+ndef_demo.c:932:13:ndefCCDump	16	static
+ndef_demo.c:968:13:ndefDumpSysInfo	24	static
+ndef_demo.c:1030:13:ndefIsSTTag	24	static
+ndef_demo.c:1070:13:LedNotificationWriteDone	16	static
+ndef_demo.c:1084:13:ledsOn	8	static
+ndef_demo.c:1094:13:ledsOff	8	static

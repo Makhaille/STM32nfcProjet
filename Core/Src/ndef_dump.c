@@ -707,6 +707,7 @@ ReturnCode ndefBufferPrint(const char* prefix, const ndefConstBuffer* bufString,
 
                 case 4:
                 	platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+                	ringbell();
                     break;
 
 //                case NDEF_DEMO_WRITE_MSG1:
