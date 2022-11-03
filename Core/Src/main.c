@@ -107,8 +107,7 @@ int main(void)
   /* Initialize log module */
   logUsartInit(&huart2);
 
-  platformLog("Welcome to X-NUCLEO-NFC05A1\r\n");
-  printf("My printf\n\r");
+  platformLog("Welcome to the NFC enabler application\r\n");
 
   if( !demoIni() )
     {

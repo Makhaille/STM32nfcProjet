@@ -687,6 +687,7 @@ ReturnCode ndefBufferDump(const char* string, const ndefConstBuffer* bufPayload,
 ReturnCode ndefBufferPrint(const char* prefix, const ndefConstBuffer* bufString, const char* suffix)
 {
     uint32_t i;
+    uint8_t test = 0;
 
     if ( (prefix == NULL) || (bufString == NULL) || (bufString->buffer == NULL) || (suffix  == NULL))
     {
@@ -697,8 +698,35 @@ ReturnCode ndefBufferPrint(const char* prefix, const ndefConstBuffer* bufString,
     for (i = 0; i < bufString->length; i++)
     {
         platformLog("%c", bufString->buffer[i]);
+        test++;
     }
     platformLog("%s", suffix);
+
+    switch(test)
+            {
+
+                case 4:
+                	platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+                    break;
+
+//                case NDEF_DEMO_WRITE_MSG1:
+//
+//                    break;
+//
+//                case NDEF_DEMO_WRITE_MSG2:
+//
+//                    break;
+//
+//                case NDEF_DEMO_FORMAT_TAG:
+//
+//                    break;
+
+                default:
+                	platformLog("Selection exit\r\n");
+                    break;
+            }
+
+    //platformLog("%d\n\r", test);
 
     return ERR_NONE;
 }

@@ -124,11 +124,11 @@ static uint8_t *ndefStates[] =
 static const uint8_t *ndefDemoFeatureDescription[NDEF_DEMO_MAX_FEATURES] =
 {
     (uint8_t *)"1. Tap a tag to read its content",
-#if NDEF_FEATURE_ALL
-    (uint8_t *)"2. Present a tag to write a Text record",
-    (uint8_t *)"3. Present a tag to write a URI record and an Android Application record",
-    (uint8_t *)"4. Present an ST tag to format",
-#endif /* NDEF_FEATURE_ALL */
+//#if NDEF_FEATURE_ALL
+//    (uint8_t *)"2. Present a tag to write a Text record",
+//    (uint8_t *)"3. Present a tag to write a URI record and an Android Application record",
+//    (uint8_t *)"4. Present an ST tag to format",
+//#endif /* NDEF_FEATURE_ALL */
 };
 
 #if NDEF_FEATURE_ALL
@@ -219,14 +219,17 @@ static void checkUserButton(void)
 static void ndefShowDemoUsage()
 {
 #if NDEF_FEATURE_ALL
-    uint32_t i;
+    //uint32_t i;
     
-    platformLog("Use the User button to cycle among the different modes:\r\n");
-    for (i = 0; i < SIZEOF_ARRAY(ndefDemoFeatureDescription); i++)
-    {
-        platformLog("%s\r\n", ndefDemoFeatureDescription[i]);
-    }
-    platformLog("In Write or Format mode (menu 2, 3 or 4), the demo returns to Read mode (menu 1) if no tag detected after %d seconds\r\n\n", NDEF_WRITE_FORMAT_TIMEOUT/1000);
+    //platformLog("Use the User button to cycle among the different modes:\r\n");
+
+    platformLog("%s\r\n", ndefDemoFeatureDescription[0]);
+
+//    for (i = 0; i < SIZEOF_ARRAY(ndefDemoFeatureDescription); i++)
+//    {
+//        platformLog("%s\r\n", ndefDemoFeatureDescription[i]);
+//    }
+    //platformLog("In Write or Format mode (menu 2, 3 or 4), the demo returns to Read mode (menu 1) if no tag detected after %d seconds\r\n\n", NDEF_WRITE_FORMAT_TIMEOUT/1000);
 #endif /* NDEF_FEATURE_ALL */
 }
 
@@ -244,12 +247,12 @@ bool demoIni( void )
 {
     ReturnCode err;
     
-#if defined(STM32L476xx)
-    if( (CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk) != 0)
-    {
-        verbose = true;
-    }
-#endif
+//#if defined(STM32L476xx)
+//    if( (CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk) != 0)
+//    {
+//        verbose = true;
+//    }
+//#endif
     ndefShowDemoUsage();
     
     err = rfalNfcInitialize();
@@ -490,9 +493,9 @@ void demoCycle( void )
                             
                             ST_MEMCPY( devUID, nfcDevice->nfcid, nfcDevice->nfcidLen );   /* Copy the UID into local var */
                             REVERSE_BYTES( devUID, RFAL_NFCV_UID_LEN );                 /* Reverse the UID for display purposes */
-                            platformLog("ISO15693/NFC-V card found. UID: %s\r\n", hex2Str(devUID, RFAL_NFCV_UID_LEN));
+                            platformLog(" test ISO15693/NFC-V card found. UID: %s\r\n", hex2Str(devUID, RFAL_NFCV_UID_LEN));
                         
-                            platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+                            //platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
                             
                             demoNdef(nfcDevice);
 
@@ -719,7 +722,7 @@ static void demoNdef(rfalNfcDevice *pNfcDevice)
     }
     else
     {
-        platformLog("%s NDEF detected.\r\n", ndefStates[info.state]);
+        platformLog("%s NDEF is detected.\r\n", ndefStates[info.state]);
         ndefCCDump(&ndefCtx);
 
         if( verbose )
