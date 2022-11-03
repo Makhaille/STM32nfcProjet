@@ -87,7 +87,7 @@ static const ndefTypeDumpTable typeDumpTable[] =
  * LOCAL FUNCTION PROTOTYPES
  ******************************************************************************
  */
-
+void ringbell(void);
 
 /*
  ******************************************************************************
