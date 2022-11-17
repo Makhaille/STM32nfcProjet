@@ -1,7 +1,7 @@
 Core/Src/i2c-lcd.o: ../Core/Src/i2c-lcd.c \
- C:/Users/romai/STM32nfcProjet/Core/Inc/i2c-lcd.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/i2c-lcd.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h \
  ../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h \
@@ -27,9 +27,9 @@ Core/Src/i2c-lcd.o: ../Core/Src/i2c-lcd.c \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h
-C:/Users/romai/STM32nfcProjet/Core/Inc/i2c-lcd.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/i2c-lcd.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h:
 ../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h:

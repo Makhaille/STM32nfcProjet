@@ -65,8 +65,8 @@ all: main-build
 main-build: STM32nfcProjet.elf secondary-outputs
 
 # Tool invocations
-STM32nfcProjet.elf STM32nfcProjet.map: $(OBJS) $(USER_OBJS) C:\Users\romai\STM32nfcProjet\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32nfcProjet.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\romai\STM32nfcProjet\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32nfcProjet.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM32nfcProjet.elf STM32nfcProjet.map: $(OBJS) $(USER_OBJS) C:\Users\julien.terrier\STM32nfcProjet\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM32nfcProjet.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\julien.terrier\STM32nfcProjet\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32nfcProjet.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

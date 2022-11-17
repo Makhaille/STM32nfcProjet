@@ -47,7 +47,7 @@
 #include "ndef_types_rtd.h"
 #include "ndef_types_mime.h"
 #include "ndef_dump.h"
-
+#include "i2c-lcd.h"
 
 /*
  ******************************************************************************
@@ -80,7 +80,9 @@ static const ndefTypeDumpTable typeDumpTable[] =
  * LOCAL VARIABLES
  ******************************************************************************
  */
-
+char line1 [] = "Julien";
+char line2 [] = "Romain";
+char line3 [] = "Maxime";
 
 /*
  ******************************************************************************
@@ -704,23 +706,33 @@ ReturnCode ndefBufferPrint(const char* prefix, const ndefConstBuffer* bufString,
 
     switch(test)
             {
-
-                case 4:
+                case 2:
                 	platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
                 	ringbell();
+                	lcd_clear();
+                	lcd_put_cur(1, 0);
+                	lcd_clear();
+                	lcd_put_cur(0, 0);
+                	lcd_send_string(line1);
                     break;
-
-//                case NDEF_DEMO_WRITE_MSG1:
-//
-//                    break;
-//
-//                case NDEF_DEMO_WRITE_MSG2:
-//
-//                    break;
-//
-//                case NDEF_DEMO_FORMAT_TAG:
-//
-//                    break;
+                case 4:
+                    platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+                    ringbell();
+                    lcd_clear();
+                    lcd_put_cur(1, 0);
+                    lcd_clear();
+                    lcd_put_cur(0, 0);
+                    lcd_send_string(line2);
+                    break;
+                case 5:
+                    platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
+                    ringbell();
+                    lcd_clear();
+                    lcd_put_cur(1, 0);
+                    lcd_clear();
+                    lcd_put_cur(0, 0);
+                    lcd_send_string(line3);
+                    break;
 
                 default:
                 	platformLog("Selection exit\r\n");

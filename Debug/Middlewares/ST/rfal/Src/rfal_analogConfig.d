@@ -1,9 +1,9 @@
 Middlewares/ST/rfal/Src/rfal_analogConfig.o: \
  ../Middlewares/ST/rfal/Src/rfal_analogConfig.c \
- C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/platform.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/platform.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32L1xx_hal.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h \
  ../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h \
@@ -30,24 +30,24 @@ Middlewares/ST/rfal/Src/rfal_analogConfig.o: \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h \
  ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/spi.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/platform.h \
- C:/Users/romai/STM32nfcProjet/Drivers/Components/timer.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/main.h \
- C:/Users/romai/STM32nfcProjet/Core/Inc/logger.h \
- C:/Users/romai/STM32nfcProjet/Drivers/Components/st_errno.h \
- C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_chip.h \
- C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_rf.h \
- C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_features.h \
- C:/Users/romai/STM32nfcProjet/Drivers/Components/utils.h \
- C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfigTbl.h \
- C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h \
- C:/Users/romai/STM32nfcProjet/Drivers/Components/st25r3911_com.h \
- C:/Users/romai/STM32nfcProjet/Drivers/Components/st_errno.h
-C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/platform.h:
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/spi.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/platform.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/timer.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/main.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/logger.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/st_errno.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_chip.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_rf.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_features.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/utils.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfigTbl.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/st25r3911_com.h \
+ C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/st_errno.h
+C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/platform.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32L1xx_hal.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h:
 ../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h:
@@ -74,17 +74,17 @@ C:/Users/romai/STM32nfcProjet/Core/Inc/stm32l1xx_hal_conf.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:
 ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/spi.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/platform.h:
-C:/Users/romai/STM32nfcProjet/Drivers/Components/timer.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/main.h:
-C:/Users/romai/STM32nfcProjet/Core/Inc/logger.h:
-C:/Users/romai/STM32nfcProjet/Drivers/Components/st_errno.h:
-C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_chip.h:
-C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_rf.h:
-C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_features.h:
-C:/Users/romai/STM32nfcProjet/Drivers/Components/utils.h:
-C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfigTbl.h:
-C:/Users/romai/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h:
-C:/Users/romai/STM32nfcProjet/Drivers/Components/st25r3911_com.h:
-C:/Users/romai/STM32nfcProjet/Drivers/Components/st_errno.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/spi.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/platform.h:
+C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/timer.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/main.h:
+C:/Users/julien.terrier/STM32nfcProjet/Core/Inc/logger.h:
+C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/st_errno.h:
+C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_chip.h:
+C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_rf.h:
+C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_features.h:
+C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/utils.h:
+C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfigTbl.h:
+C:/Users/julien.terrier/STM32nfcProjet/Middlewares/ST/rfal/Inc/rfal_analogConfig.h:
+C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/st25r3911_com.h:
+C:/Users/julien.terrier/STM32nfcProjet/Drivers/Components/st_errno.h:

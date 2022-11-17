@@ -58,8 +58,8 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 uint8_t globalCommProtectCnt = 0;
-char strLcdLine1 [] = "Hello";
-char strLcdLine2 [] = "World";
+char strLcdLine1 [] = "Init";
+char strLcdLine2 [] = "lcd";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -112,6 +112,9 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
+  /* Initialize driver*/
+  spiInit(&hspi1);
+
   /* Initialize LCD*/
   lcd_init ();
   lcd_put_cur(0, 0);
@@ -119,13 +122,11 @@ int main(void)
   lcd_put_cur(1, 0);
   lcd_send_string(strLcdLine2);
 
-  /* Initialize driver*/
-  spiInit(&hspi1);
-
   /* Initialize log module */
   logUsartInit(&huart2);
 
   platformLog("Welcome to the NFC enabler application\r\n");
+
 
   if( !demoIni() )
     {
