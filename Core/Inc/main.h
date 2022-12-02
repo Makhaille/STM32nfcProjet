@@ -29,6 +29,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l1xx_hal.h"
+#include "stm32l1xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -63,8 +64,6 @@ void Error_Handler(void);
 #define IRQ_3911_Pin GPIO_PIN_0
 #define IRQ_3911_GPIO_Port GPIOA
 #define IRQ_3911_EXTI_IRQn EXTI0_IRQn
-#define LED_F_Pin GPIO_PIN_1
-#define LED_F_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3

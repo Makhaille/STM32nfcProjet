@@ -1,0 +1,5 @@
+../Core/Src/adc.c:33:6:MX_ADC_Init	24	static
+../Core/Src/adc.c:78:6:HAL_ADC_MspInit	48	static
+../Core/Src/adc.c:122:6:HAL_ADC_MspDeInit	16	static
+../Core/Src/adc.c:148:9:SYS_GetMCUTemperature	16	static
+../Core/Src/adc.c:156:7:ADC_GetTrimmerVoltage	8	static

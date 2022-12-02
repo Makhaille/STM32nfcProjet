@@ -1,4 +1,7 @@
-../Core/Src/spi.c:55:6:spiInit	16	static
-../Core/Src/spi.c:63:6:spiSelect	16	static
-../Core/Src/spi.c:68:6:spiDeselect	16	static
-../Core/Src/spi.c:73:19:spiTxRx	32	static
+../Core/Src/spi.c:41:6:MX_SPI1_Init	8	static
+../Core/Src/spi.c:63:6:HAL_SPI_MspInit	48	static
+../Core/Src/spi.c:94:6:HAL_SPI_MspDeInit	16	static
+../Core/Src/spi.c:119:6:spiInit	16	static
+../Core/Src/spi.c:127:6:spiSelect	16	static
+../Core/Src/spi.c:132:6:spiDeselect	16	static
+../Core/Src/spi.c:137:19:spiTxRx	32	static

@@ -469,7 +469,7 @@ void demoCycle( void )
                             demoNdef(nfcDevice);
                         }
                         
-                        platformLedOn(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
+                        //platformLedOn(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
                         /* Loop until tag is removed from the field */
                         platformLog("Operation completed\r\nTag can be removed from the field\r\n");
                         devCnt = 1;
@@ -1085,7 +1085,7 @@ static void ledsOn(void)
 {
     platformLedOn(PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN);
     platformLedOn(PLATFORM_LED_B_PORT, PLATFORM_LED_B_PIN);
-    platformLedOn(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
+    //platformLedOn(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
     platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
     platformLedOn(PLATFORM_LED_AP2P_PORT, PLATFORM_LED_AP2P_PIN);
     platformLedOn(PLATFORM_LED_FIELD_PORT, PLATFORM_LED_FIELD_PIN);
@@ -1095,7 +1095,7 @@ static void ledsOff(void)
 {
     platformLedOff(PLATFORM_LED_A_PORT, PLATFORM_LED_A_PIN);
     platformLedOff(PLATFORM_LED_B_PORT, PLATFORM_LED_B_PIN);
-    platformLedOff(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
+    //platformLedOff(PLATFORM_LED_F_PORT, PLATFORM_LED_F_PIN);
     platformLedOff(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
     platformLedOff(PLATFORM_LED_AP2P_PORT, PLATFORM_LED_AP2P_PIN);
     platformLedOff(PLATFORM_LED_FIELD_PORT, PLATFORM_LED_FIELD_PIN);

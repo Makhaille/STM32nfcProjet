@@ -49,6 +49,11 @@
 #include "ndef_dump.h"
 #include "i2c-lcd.h"
 
+#include "adc.h"
+#include "dma.h"
+#include "stdio.h"
+#include "string.h"
+
 /*
  ******************************************************************************
  * GLOBAL DEFINES
@@ -81,8 +86,9 @@ static const ndefTypeDumpTable typeDumpTable[] =
  ******************************************************************************
  */
 char line1 [] = "Julien";
-char line2 [] = "Romain";
+//char line2 [] = "Romain";
 char line3 [] = "Maxime";
+float line2;
 
 /*
  ******************************************************************************
@@ -690,6 +696,11 @@ ReturnCode ndefBufferPrint(const char* prefix, const ndefConstBuffer* bufString,
 {
     uint32_t i;
     uint8_t test = 0;
+    char valtension[5];
+
+    line2 = ADC_GetTrimmerVoltage();
+
+    sprintf (valtension, "%.2f", line2);
 
     if ( (prefix == NULL) || (bufString == NULL) || (bufString->buffer == NULL) || (suffix  == NULL))
     {
@@ -722,7 +733,7 @@ ReturnCode ndefBufferPrint(const char* prefix, const ndefConstBuffer* bufString,
                     lcd_put_cur(1, 0);
                     lcd_clear();
                     lcd_put_cur(0, 0);
-                    lcd_send_string(line2);
+                    lcd_send_string(valtension);
                     break;
                 case 5:
                     platformLedOn(PLATFORM_LED_V_PORT, PLATFORM_LED_V_PIN);
